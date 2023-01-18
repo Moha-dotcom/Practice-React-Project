@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 * {
   box-sizing: border-box;
   margin: 0;
@@ -43,9 +45,12 @@ header {
 }
 
 .card.reverse {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: #ff6a95;
   color: #fff;
+  font-family: 'Times New Roman', Times, serif;
 }
+
+
 
 .card h2 {
   font-size: 22px;
