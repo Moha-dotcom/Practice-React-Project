@@ -49,7 +49,7 @@ function App() {
           <>
                 <FeedBackForm HandleFormAdd={handleAdd} />
                 <FeedBackStats feedback={feedback}></FeedBackStats>
-              <FeedBackList feedbackItem = {feedback}  handleDelete={feedbackDelete} />
+                <FeedBackList feedbackItem = {feedback}  handleDelete={feedbackDelete} />
           </>
 
         }/>
