@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Button from './Button'
 import RatingSelect from '../RatingSelect'
 
-import { v4 as uuidv4 } from 'uuid'
+
 
 export default function FeedBackForm({HandleFormAdd}) {
 
@@ -26,7 +26,7 @@ export default function FeedBackForm({HandleFormAdd}) {
             setBtnDisabled(false)
         }
         setText(e.target.value)
-        // console.log(text)
+        
     }
 
 
@@ -42,6 +42,8 @@ export default function FeedBackForm({HandleFormAdd}) {
         }
        
         HandleFormAdd(Data)
+
+        setText('')
 
     }
   return (

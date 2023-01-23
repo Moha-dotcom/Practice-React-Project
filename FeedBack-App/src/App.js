@@ -7,8 +7,9 @@ import FeedBackStats from './components/FeedBackStats';
 import Header from './components/Header';
 import FeedBackForm from './components/UI/FeedBackForm';
 import FeedBackData from './data/FeedBackData'
+import {BrowserRouter as  Router, Route, Routes} from 'react-router-dom'
 
-
+import AboutPage from './pages/AboutPage';
 
 
 function App() {
@@ -30,21 +31,39 @@ function App() {
   }
 
   
-
-
   return (
-    <>
+   
+    <Router>
     <Header />
    
-    <div className="container">
-      <FeedBackForm HandleFormAdd={handleAdd} />
-    <FeedBackStats feedback={feedback}></FeedBackStats>
-          <FeedBackList feedbackItem = {feedback}  handleDelete={feedbackDelete} />
-    </div>
-      
- 
+    
+     
+     
+    
   
-    </>
+    <div className="container">
+        <Routes>
+          <Route path="/about" element={<AboutPage/>} exact />
+         
+        <Route path="/"  element={
+          <>
+                <FeedBackForm HandleFormAdd={handleAdd} />
+                <FeedBackStats feedback={feedback}></FeedBackStats>
+              <FeedBackList feedbackItem = {feedback}  handleDelete={feedbackDelete} />
+          </>
+
+        }/>
+          
+       </Routes>
+       </div>
+    
+   
+
+     
+    
+  
+    </Router>
+  
 
   );
 }
