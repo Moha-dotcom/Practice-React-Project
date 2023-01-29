@@ -14,4 +14,4 @@ Then Launch:
 
 
 
-<img src="/Users/mohamedabdullahi/Desktop/Practice-React-Project/2-birthday-reminder/src/image/birthday-app.png" />
+<img src="2-birthday-reminder/src/image/birthday-app.png" />
