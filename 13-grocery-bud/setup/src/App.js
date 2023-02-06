@@ -3,9 +3,10 @@ import List from './List'
 import Alert from './Alert'
 import {v4 as uuidv4} from 'uuid'
 
-
+// Create LocalStorage to Store Grocery Item on LocalStorage Web API
 const getLocalStorage = () => {
   let list = localStorage.getItem('list');
+  console.log(list)
   if(list){
     return JSON.parse(localStorage.getItem('list'))
   }else{
