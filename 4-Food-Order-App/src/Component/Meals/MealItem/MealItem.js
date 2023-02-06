@@ -9,9 +9,6 @@ export default function MealItem({id, name, price, image, description}) {
     const cartCxt = useContext(CartContext)
     // const price = `$${props.price}`;
 
- 
-
-
     const addToCartHandler = (amount) => {
         cartCxt.addItem({
             id: id,
